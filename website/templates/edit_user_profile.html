@@ -1,0 +1,250 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <div class="main-body">
+    
+          <!-- Breadcrumb -->
+          <!-- <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="account-home.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="lead-profile.html">Leads</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Lead Profile</li>
+            </ol>
+          </nav> -->
+          <!-- /Breadcrumb -->
+          <br>
+          <br>
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <form method="POST" action="/update">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <input type="hidden" value="{{ profile.Name }}" name="beforeName">
+                      <input type="text" value="{{ profile.Name }}" name="updatedName">
+                      <p class="text-secondary mb-1">
+                        <input type="hidden" value="{{ profile.Email }}" name="beforeEmail">
+                        <input type="text" value="{{ profile.Email }}" name="updatedEmail">
+                      </p>
+                      <p class="text-muted font-size-sm">
+                        <input type="hidden" value="{{ profile.Phone }}" name="beforePhone">
+                       <input type="text" value="{{ profile.Phone }}" name="updatedPhone"> 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-university"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" ></svg>Has Financing:</h6>
+                      <span class="text-secondary">
+                        <input type="hidden" value="{{ profile.HasFinancing }}" name="beforeHasFinancing">
+                        <input type="text" value="{{ profile.HasFinancing }}" name="updatedHasFinancing">
+                      </span>
+                    </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-dollar-sign"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg>&nbsp&nbspBudget:</h6>
+                      <span class="text-secondary">
+                        <input type="hidden" value="{{ profile.Budget }}" name="beforeBudget">
+                        <input type="text" value="{{ profile.Budget }}" name="updatedBudget">
+                      </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-money-bill-wave"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg>Down Payment:</h6>
+                      <span class="text-secondary">
+                        <input type="hidden" value="{{ profile.DownPayment }}" name="beforeDownPayment">
+                        <input type="text" value="{{ profile.DownPayment }}" name="updatedDownPayment">
+                      </span>
+                    </li>
+                </ul>
+              </div>
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-building"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg><u>Account:</u></h6>
+                      <span class="text-secondary">
+                        <input type="hidden" value="{{ profile.AccountName }}" name="beforeAccountName">
+                        <input type="text" value="{{ profile.AccountName }}" name="updatedAccountName">
+                      </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-home"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg><u>Location:</u></h6>
+                      <span class="text-secondary">
+                        <input type="hidden" value="{{ profile.AccountAddress }}" name="beforeAccountAddress">
+                        <input type="text" value="{{ profile.AccountAddress }}" name="updatedAccountAddress">
+                        <br>
+                        <input type="hidden" value="{{ profile.AccountCity }}" name="beforeAccountCity">
+                        <input type="text" value="{{ profile.AccountCity }}" name="updatedAccountCity">
+                        <br>
+                        <input type="hidden" value="{{ profile.AccountState }}" name="beforeAccountState">
+                        <input type="text" value="{{ profile.AccountState }}" name="updatedAccountState">
+                        <br>  
+                        <input type="hidden" value="{{ profile.AccountZip }}" name="beforeAccountZip">
+                        <input type="text" value="{{ profile.AccountZip }}" name="updatedAccountZip">
+                        <br>    
+                      </span>
+                    </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="card mb-3">
+               
+                <h6 class="d-flex justify-content-center"><u>REQUESTS</u></h6>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Location:</h6>
+                    </div> 
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.BuildCity }}" name="beforeCity">
+                        <input type="text" value="{{ profile.BuildCity }}" name="updatedCity">
+                        <br>
+                        <input type="hidden" value="{{ profile.BuildState }}" name="beforeState">
+                        <input type="text" value="{{ profile.BuildState }}" name="updatedState">
+                  </div>
+
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Model of Interest:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      
+                        <input type="hidden" value="{{ profile.ModelofInterest }}" name="beforeModelofInterest">
+                        <input type="text" value="{{ profile.ModelofInterest }}" name="updatedModelofInterest">
+                    
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Bedrooms:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.Bedrooms }}" name="beforeBedrooms">
+                        <input type="text" value="{{ profile.Bedrooms }}" name="updatedBedrooms">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Bathrooms:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.Bathrooms }}" name="beforeBathrooms">
+                        <input type="text" value="{{ profile.Bathrooms }}" name="updatedBathrooms">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Square Footage:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.SquareFootage }}" name="beforeSquareFootage">
+                        <input type="text" value="{{ profile.SquareFootage }}" name="updatedSquareFootage">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Product Series:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.ProductSeries }}" name="beforeProductSeries">
+                        <input type="text" value="{{ profile.ProductSeries }}" name="updatedProductSeries">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Timing:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.Timing }}" name="beforeTiming">
+                        <input type="text" value="{{ profile.Timing }}" name="updatedTiming">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Home Placement:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.HomePlacement }}" name="beforeHomePlacement">
+                        <input type="text" value="{{ profile.HomePlacement }}" name="updatedHomePlacement">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Construction Code:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.ConstructionCode }}" name="beforeConstructionCode">
+                        <input type="text" value="{{ profile.ConstructionCode }}" name="updatedConstructionCode">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Construction Type:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        <input type="hidden" value="{{ profile.ConstructionType }}" name="beforeConstructionType">
+                        <input type="text" value="{{ profile.ConstructionType }}" name="updatedConstructionType">
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-4"><u>Customer Comments:</u></h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      <input type="hidden" value="{{ profile.CustomerComments }}" name="beforeCustomerComments">
+                      <textarea rows="5" cols="80" type="text" value="{{ profile.CustomerComments }}" name="updatedCustomerComments">{{ profile.CustomerComments }}</textarea>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-4"><u>Notes:</u></h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      <input type="hidden" value="{{ profile.Notes }}" name="beforeNotes">
+                      <textarea rows="5" cols="80" type="text" value="{{ profile.Notes }}" name="updatedNotes">{{ profile.Notes }}</textarea>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                        <br>
+                          <button type="submit" class="btn btn-primary">Save</button>
+                          </form>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+                  
+                
+              
+        
+    
+
+{% endblock %}

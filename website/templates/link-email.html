@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Link Email{% endblock %}
+
+{% block content %}
+
+<title>Welcome {{ name }}</title>
+
+
+<form method ="POST">
+<br />
+<h3 align="center">Link Email</h3>
+<div class="form-group">
+    <label for="linkedEmail">Email Address</label>
+    <input 
+        type="email" 
+        class="form-control" 
+        id="linkedEmail" 
+        name="linkedEmail" 
+        placeholder="Enter email"
+    />
+</div>
+<br />
+<button type="submit" class="btn btn-primary">Link</button>
+</form>
+
+{% endblock %}

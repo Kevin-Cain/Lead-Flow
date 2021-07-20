@@ -1,0 +1,200 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <div class="main-body">
+    
+          <!-- Breadcrumb -->
+          <!-- <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+              <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            </ol>
+          </nav> -->
+          <!-- /Breadcrumb -->
+          <br>
+          <br>
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4>{{ profile.Name }}</h4>
+                      <p class="text-secondary mb-1">{{ profile.Email }}</p>
+                      <p class="text-muted font-size-sm">{{ profile.Phone }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-university"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" ></svg>Has Financing:</h6>
+                      <span class="text-secondary">{{ profile.HasFinancing }}</span>
+                    </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-dollar-sign"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg>&nbsp&nbspBudget:</h6>
+                      <span class="text-secondary">{{ profile.Budget }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-money-bill-wave"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg>Down Payment:</h6>
+                      <span class="text-secondary">{{ profile.DownPayment }}</span>
+                    </li>
+                </ul>
+              </div>
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-building"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg><u>Account:</u></h6>
+                      <span class="text-secondary">{{ profile.AccountName }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 class="mb-0"><i class="fas fa-home"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"></svg><u>Location:</u></h6>
+                      <span class="text-secondary">{{ profile.AccountAddress }}<br> {{ profile.AccountCity }}, {{ profile.AccountState }}, {{ profile.AccountZip }}</span>
+                    </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+               
+                <h6 class="d-flex justify-content-center"><u>REQUESTS</u></h6>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Location:</h6>
+                    </div> 
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.BuildCity }}, {{ profile.BuildState }}
+                  </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Model of Interest:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                        {{ profile.ModelofInterest }}
+                    </form>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Bedrooms:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.Bedrooms }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Bathrooms:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.Bathrooms }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Square Footage:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.SquareFootage }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Product Series:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.ProductSeries }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Timing:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.Timing }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Home Placement:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.HomePlacement }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Construction Code:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.ConstructionCode }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-0">Construction Type:</h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">
+                      {{ profile.ConstructionType }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-4"><u>Customer Comments:</u></h6>
+                    </div>
+                    <div class="col-sm-20 text-secondary">{{profile.CustomerComments}}</div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h6 class="mb-4"><u>Notes:</u></h6></div>
+                        <div class="col-sm-20 text-secondary">
+                            <div class="col-sm-20 text-secondary">{{profile.Notes}}</div>
+                </div>
+                <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                        <br>
+                        <form method ="POST">
+                        <button type="submit" name="save" value="save" class="btn btn-primary">Edit</button>
+                        <button type="submit" name="delete" value="delete" class="btn btn-danger">Delete Lead</button>
+                        </form>
+                        
+                        
+                        
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+                  
+                
+              
+        
+    
+
+{% endblock %}
