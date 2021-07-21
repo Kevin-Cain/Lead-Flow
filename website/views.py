@@ -6,7 +6,6 @@ import flask
 import requests
 import json
 
-#from werkzeug.datastructures import V
 from .models import User, db, Leads
 from flask_sqlalchemy import SQLAlchemy
 import base64

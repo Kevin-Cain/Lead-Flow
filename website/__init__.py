@@ -13,7 +13,7 @@ DB_NAME = "database.db"
 def create_app():
     
     app = Flask(__name__)
-    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+    #os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
     app.config['SECRET_KEY'] = 'YoursecretKey'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
