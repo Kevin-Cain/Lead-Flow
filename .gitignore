@@ -130,4 +130,4 @@ dmypy.json
 .pyre/
 
 # credentials
-credentials.json
+# credentials.json
