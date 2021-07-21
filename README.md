@@ -32,7 +32,21 @@ cd Lead-Flow
 ```
 python3 application.py
 ```
+* User Makes Account
 
-```
-python3 Blackjack.py
-```
+![Screenshot from 2021-07-20 21-21-13](https://user-images.githubusercontent.com/79290152/126433204-15a2cb91-fe00-4583-a71d-5d915a59d619.png)
+
+* Home Screen
+
+![Screenshot from 2021-07-20 21-21-37](https://user-images.githubusercontent.com/79290152/126433374-adbe590b-0468-4f42-88e4-ca69e3916572.png)
+
+* Oauth2 Redirect
+
+![GoogleAuth](https://user-images.githubusercontent.com/79290152/126437677-c874a7e5-d366-4e50-96b5-5b029bbf075b.png)
+
+
+* Searching for gmail emails matching "from" and "subject" 
+
+![Screenshot from 2021-07-20 21-24-14](https://user-images.githubusercontent.com/79290152/126435521-8276840f-7a84-4eff-8a23-2021f2b0cb48.png)
+
+
