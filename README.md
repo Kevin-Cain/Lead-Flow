@@ -25,14 +25,14 @@ pip install requirements.txt
 ```
 
 ### Executing program
-cd 
 
 ```
-cd Blackjack
+cd Lead-Flow
 ```
 ```
-cd Blackjack_Game
+python3 application.py
 ```
+
 ```
 python3 Blackjack.py
 ```
