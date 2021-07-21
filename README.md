@@ -44,9 +44,24 @@ python3 application.py
 
 ![GoogleAuth](https://user-images.githubusercontent.com/79290152/126437677-c874a7e5-d366-4e50-96b5-5b029bbf075b.png)
 
-
-* Searching for gmail emails matching "from" and "subject" 
+* Searching for gmail emails matching "Sender" and "Subject" 
 
 ![Screenshot from 2021-07-20 21-24-14](https://user-images.githubusercontent.com/79290152/126435521-8276840f-7a84-4eff-8a23-2021f2b0cb48.png)
+
+* Leads pulled from Gmail API request
+
+![Screenshot from 2021-07-20 22-58-25](https://user-images.githubusercontent.com/79290152/126438822-9ca47704-385d-483c-bfa2-992ee32bebd7.png)
+
+* Lead Profile
+
+![Screenshot from 2021-07-20 22-58-43](https://user-images.githubusercontent.com/79290152/126438965-a9e5ee2b-f2c5-4dbc-ba3b-183244d2ed4f.png)
+
+* Edit Lead Profile
+
+![Screenshot from 2021-07-20 22-58-54](https://user-images.githubusercontent.com/79290152/126439318-af3edf43-6776-4ec5-b7ff-e8b5a2a7abc6.png)
+
+
+
+
 
 
