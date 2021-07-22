@@ -42,19 +42,6 @@ def home():
 
 
 
-# @views.route('/emailsync', methods=['GET', 'POST'])
-# @login_required
-# def emailsync():
-#     name = db.session.query(User.firstName).first()
-#     name = name[0]
-
-#     if request.method == 'POST':
-#         linkedEmail = request.form.get('linkedEmail')
-#         return redirect(url_for('views.authorize'))
-#     return render_template("link-email.html", user=current_user, name=name)
-
-    
-
 @views.route('/test', methods=['GET', 'POST'])
 def test_api_request():
     if 'credentials' not in flask.session:
